@@ -73,6 +73,21 @@ const server = http.createServer((req, res) => {
                 res.end(JSON.stringify(todo));
               });
               break;
+            case "PATCH":
+              // Partially update a todo by ID
+              let patchBody = "";
+              req.on("data", (chunk) => {
+                patchBody += chunk.toString();
+              });
+              req.on("end", () => {
+                const patchData = JSON.parse(patchBody);
+                Object.assign(todo, patchData);
+                // Write data back to JSON file
+                fs.writeFileSync("data.json", JSON.stringify(todos), "utf8");
+                res.writeHead(200, { "Content-Type": "application/json" });
+                res.end(JSON.stringify(todo));
+              });
+              break;
             case "DELETE":
               // Delete a todo by ID
               const index = todos.indexOf(todo);
