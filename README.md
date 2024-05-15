@@ -1,6 +1,6 @@
-##Endpoints.
+## Endpoints ##
 
-##GET/todos##
+## GET/todos ##
 
 Description: Retrieve a list of all todos.
 
@@ -16,7 +16,7 @@ Response Status Codes:
 
 ![alt text](./assets/get2.png)
 
-##POST /todos
+## POST /todos
 
 Description: Create a new todo.
 
@@ -40,7 +40,7 @@ Response Status Codes:
 
 ![alt text](./assets/post.png)
 
-##PUT /todos/:id
+## PUT /todos/:id ##
 
 Description: Update an existing todo by its ID.
 
@@ -64,7 +64,7 @@ Response Status Codes:
 
 ![alt text](./assets/put.png)
 
-##PATCH /todos/:id
+## PATCH /todos/:id ##
 
 Description: Partially update an existing todo by its ID.
 
@@ -88,7 +88,7 @@ Response Status Codes:
 
 ![alt text](./assets/patch.png)
 
-##DELETE /todos/:id
+## DELETE /todos/:id ##
 
 Description: Delete a todo by its ID.
 
