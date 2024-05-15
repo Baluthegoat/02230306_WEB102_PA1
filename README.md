@@ -40,3 +40,68 @@ Response Status Codes:
 
 ![alt text](./assets/post.png)
 
+##PUT /todos/:id
+
+Description: Update an existing todo by its ID.
+
+Request Method: PUT
+
+Request Parameters: id (integer): The ID of the todo to be 
+
+updated.
+
+Request Body: JSON object containing the updated todo 
+
+fields. Both task and completed fields are required.
+
+Response Status Codes:
+
+200 OK: Todo updated successfully.
+
+404 Not Found: Todo with the specified ID not found.
+
+405 Method Not Allowed: Unsupported request method.
+
+![alt text](./assets/put.png)
+
+##PATCH /todos/:id
+
+Description: Partially update an existing todo by its ID.
+
+Request Method: PATCH
+
+Request Parameters: id (integer): The ID of the todo to be
+
+updated.
+
+Request Body: JSON object containing the fields to be
+
+updated. Can include task, completed, or both.
+
+Response Status Codes:
+
+200 OK: Todo updated successfully.
+
+404 Not Found: Todo with the specified ID not found.
+
+405 Method Not Allowed: Unsupported request method.
+
+![alt text](./assets/patch.png)
+
+##DELETE /todos/:id
+
+Description: Delete a todo by its ID.
+
+Request Method: DELETE
+
+Request Parameters: id (integer): The ID of the todo to be
+
+deleted.
+
+Response Status Codes:
+
+204 No Content: Todo deleted successfully.
+
+404 Not Found: Todo with the specified ID not found.
+
+![alt text](./assets/delete.png)
